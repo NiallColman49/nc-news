@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Main = () => {
   return (
     <>
@@ -16,7 +18,7 @@ const Main = () => {
               <a href="link-to-topics"> Topics </a>
             </li>
             <li>
-              <a href="link to articles"> Articles </a>
+              <Link to="/allarticles">Articles</Link>
             </li>
             <li>
               <a href="link to categories">Categories</a>
