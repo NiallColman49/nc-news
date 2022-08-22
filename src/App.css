@@ -1,0 +1,540 @@
+@import url(//db.onlinewebfonts.com/c/341e83cf2165f258e7ff699946918e50?family=Brandon+Grotesque+Light);
+@import url(//db.onlinewebfonts.com/c/4c40c7f27503517082e3857518913bab?family=Brandon+Grotesque+Bold);
+@import url(//db.onlinewebfonts.com/c/5116a4d958b55b9c7872c9af3b076af1?family=Brandon+Grotesque+Medium);
+
+@font-face {
+  font-family: "Brandon Grotesque Light";
+  src: url("//db.onlinewebfonts.com/t/341e83cf2165f258e7ff699946918e50.eot");
+  src: url("//db.onlinewebfonts.com/t/341e83cf2165f258e7ff699946918e50.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/341e83cf2165f258e7ff699946918e50.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/341e83cf2165f258e7ff699946918e50.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/341e83cf2165f258e7ff699946918e50.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/341e83cf2165f258e7ff699946918e50.svg#Brandon Grotesque Light")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Medium";
+  src: url("//db.onlinewebfonts.com/t/5116a4d958b55b9c7872c9af3b076af1.eot");
+  src: url("//db.onlinewebfonts.com/t/5116a4d958b55b9c7872c9af3b076af1.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/5116a4d958b55b9c7872c9af3b076af1.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/5116a4d958b55b9c7872c9af3b076af1.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/5116a4d958b55b9c7872c9af3b076af1.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/5116a4d958b55b9c7872c9af3b076af1.svg#Brandon Grotesque Medium")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Brandon Grotesque Bold";
+  src: url("//db.onlinewebfonts.com/t/4c40c7f27503517082e3857518913bab.eot");
+  src: url("//db.onlinewebfonts.com/t/4c40c7f27503517082e3857518913bab.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/4c40c7f27503517082e3857518913bab.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/4c40c7f27503517082e3857518913bab.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/4c40c7f27503517082e3857518913bab.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/4c40c7f27503517082e3857518913bab.svg#Brandon Grotesque Bold")
+      format("svg");
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html,
+body {
+  font-family: sans-serif;
+  font-size-adjust: auto;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+div:focus {
+  outline: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+a {
+  font-family: "Brandon Grotesque Light";
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+  color: red;
+}
+button {
+  cursor: cell;
+  background: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  font-family: "Brandon Grotesque Light";
+  font-size: 1.25em;
+  line-height: 1.4em;
+  color: #000000;
+}
+p {
+  font-family: "Brandon Grotesque Light";
+  line-height: 1.4em;
+}
+button {
+  font-family: "Brandon Grotesque Light";
+  font-size: inherit;
+}
+.intro {
+  color: #000000;
+  font-family: "Brandon Grotesque Light";
+  font-size: 4.5em;
+  line-height: 84px;
+  width: 85%;
+}
+.intro p {
+  margin: 0 0 1.2em;
+}
+.intro,
+.text,
+.body-text {
+  line-height: 1.2em;
+}
+span.underline {
+  border-bottom: 2px solid red;
+}
+@media screen and (max-width: 1500px) {
+  body {
+    font-size: 18px;
+  }
+  .intro {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  .intro {
+    width: 90%;
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    line-height: 1.3em;
+  }
+  .intro {
+    font-size: 36px;
+    line-height: 42px;
+    padding: 0 16px;
+    width: 90%;
+  }
+  .intro a,
+  .text a,
+  .body-text-smaller .text,
+  .body-text-large .text,
+  .larger-text {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+main {
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .intro {
+    width: 100%;
+    padding: 190px 0 0;
+  }
+}
+::-moz-selection {
+  color: red;
+}
+::selection {
+  color: red;
+}
+.container {
+  width: 90%;
+  max-width: 1536px;
+  margin: 0 auto;
+  box-sizing: content-box;
+  position: relative;
+}
+.page-wrap {
+  padding-top: 250px;
+}
+.site-header {
+  padding: 76px 0 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background: #fff;
+  transition: transform 0.3s;
+}
+.site-header .header-container {
+  overflow: hidden;
+}
+.site-header .logo {
+  height: 85px;
+  width: 130px;
+  float: left;
+  z-index: 3;
+  position: relative;
+}
+.site-header .main-nav {
+  width: 21.0344827586%;
+  float: right;
+  margin: 24px 0 0;
+  font-family: "Brandon Grotesque Light";
+  color: #000;
+  z-index: 2;
+}
+.site-header .main-nav ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.site-header .main-nav ul li a {
+  display: block;
+  border-bottom: 1px solid transparent;
+  line-height: 1em;
+  transition: border-color 0.3s;
+}
+.compressed .site-header {
+  -ms-transform: translateY(-66px);
+  transform: translateY(-66px);
+}
+.hamburger {
+  display: none;
+  width: 43px;
+  height: 43px;
+  position: relative;
+  float: right;
+  border: 1px solid #000;
+  border-radius: 50%;
+  z-index: 2;
+}
+.hamburger span {
+  top: 20px;
+  transition: background 0.25s;
+}
+.hamburger span:before,
+.hamburger span:after {
+  content: "";
+}
+.hamburger span,
+.hamburger span:before,
+.hamburger span:after {
+  position: absolute;
+  background: #000;
+  width: 20px;
+  height: 1px;
+  left: 11px;
+}
+.hamburger span:before,
+.hamburger span:after {
+  left: 0;
+  transition: top 0.2s 0.2s, transform 0.2s, background 0.2s;
+}
+.hamburger span:before {
+  top: 6px;
+}
+.hamburger span:after {
+  top: -6px;
+}
+@media screen and (max-width: 600px) {
+  .site-header {
+    padding: 30px 0;
+    height: 80px;
+    -ms-transform: none;
+    transform: none;
+  }
+  .site-header .logo {
+    width: 115px;
+    height: 95px;
+    position: relative;
+    left: 16px;
+    z-index: 3;
+  }
+  .site-header .main-nav {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0s 0.4s;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    margin: 0;
+    font-size: 36px;
+    line-height: 52px;
+    font-family: "Brandon Grotesque Medium";
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .site-header .main-nav ul {
+    display: block;
+    padding: 80px 16px;
+    margin: auto;
+    width: 100%;
+  }
+  .site-header .main-nav ul li {
+    border-top: 2px solid black;
+    margin: 0;
+  }
+  .site-header .main-nav ul li a {
+    display: inline-block;
+    padding: 0.2em 0 0;
+    border-bottom: none;
+  }
+  .compressed .site-header {
+    -ms-transform: none;
+    transform: none;
+  }
+  .hamburger {
+    display: block;
+    right: 16px;
+  }
+}
+.site-footer {
+  line-height: 24px;
+  padding-bottom: 2em;
+  font-family: "Brandon Grotesque Light";
+  font-weight: 300;
+  color: black;
+}
+.site-footer .container {
+  border-top: 1px solid black;
+  padding: 1em 0 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.site-footer .socials ul {
+  display: -ms-flexbox;
+  display: flex;
+}
+.site-footer .socials ul svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: black;
+}
+.site-footer .socials ul .instagram {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 0 12px 0 0;
+}
+.site-footer .socials ul .twitter {
+  width: 22px;
+  height: 18px;
+  display: block;
+}
+@media screen and (max-width: 600px) {
+  .site-footer {
+    padding: 0 16px;
+  }
+  .site-footer .container {
+    display: block;
+  }
+  .site-footer .container .footer--column {
+    width: 100%;
+    margin: 0 0 1em;
+  }
+  .site-footer .container .footer--column.socials {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: auto;
+  }
+}
+ul.featured-projects {
+  font-family: "Brandon Grotesque Light";
+  font-weight: 300;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+ul.featured-projects li {
+  width: 23.828125%;
+  margin: 0 1.5625% 4.35em 0;
+}
+ul.featured-projects li:nth-child(4n) {
+  margin-right: 0;
+}
+ul.featured-projects li a {
+  border-top: 1px solid #000;
+  color: #000;
+  line-height: 1.5em;
+  display: block;
+  padding: 2px 0 0;
+  transition: border-color 0.3s;
+}
+@media screen and (max-width: 600px) {
+  ul.featured-projects li {
+    margin-bottom: 2em;
+    width: 100%;
+  }
+  ul.featured-projects {
+    margin-bottom: 4em;
+  }
+  .featured-projects {
+    padding: 0 16px;
+  }
+  .home-wrapper .intro {
+    padding: 0 16px 32px;
+  }
+}
