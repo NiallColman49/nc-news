@@ -14,18 +14,18 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer--column">
-            <a href="">0333 050 4368</a>
+            <a>0333 050 4368</a>
           </div>
           <div className="footer--column socials">
             <ul>
               <li>
-                <a className="instagram" href="https://www.instagram.com/">
-                  <img src={Instagram} alt="" />
+                <a className="instagram">
+                  <img src={Instagram} alt="Instagram icon" />
                 </a>
               </li>
               <li>
-                <a className="twitter" href="https://twitter.com/">
-                  <img src={Twitter} alt="" />
+                <a className="twitter">
+                  <img src={Twitter} alt="Twitter icon" />
                 </a>
               </li>
             </ul>

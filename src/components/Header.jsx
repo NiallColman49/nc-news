@@ -7,9 +7,9 @@ const Header = () => {
       <header className="site-header">
         <div className="container header-container">
           <div className="logo">
-            <a href="https://www.northcoders.com">
+            <Link to="/">
               <img src={Logo} alt="" />
-            </a>
+            </Link>
           </div>
           <nav className="main-nav">
             <ul className="menu">
@@ -17,16 +17,19 @@ const Header = () => {
                 <Link to="/allarticles">Articles</Link>
               </li>
               <li>
-                <a href="">Users</a>
+                <a>Users</a>
               </li>
               <li>
-                <a href="">Topics</a>
+                <a>Topics</a>
               </li>
               <li>
-                <a href="">Login</a>
+                <a>Login</a>
               </li>
             </ul>
           </nav>
+          <button class="hamburger">
+            <span></span>
+          </button>
         </div>
       </header>
     </>

@@ -13,7 +13,7 @@ const Articles = () => {
     });
   }, []);
 
-  if (isLoading) return <h1>IS LOADING...</h1>;
+  if (isLoading) return <h1>Currently loading...</h1>;
   return (
     <ul>
       {articles.map((article) => {
