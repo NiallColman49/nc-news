@@ -1,4 +1,5 @@
 import Logo from "../northcoders-logo.svg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
           <nav className="main-nav">
             <ul className="menu">
               <li>
-                <a href="">Articles</a>
+                <Link to="/allarticles">Articles</Link>
               </li>
               <li>
                 <a href="">Users</a>

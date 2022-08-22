@@ -538,3 +538,40 @@ ul.featured-projects li a {
     padding: 0 16px 32px;
   }
 }
+.article-wrapper:first-child {
+  padding-top: 250px;
+}
+.article-container {
+  margin-left: 4em;
+  border-top: 1px solid black;
+  width: 55%;
+}
+.article-item {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.article-title {
+  font-size: 40px;
+  font-family: "Brandon Grotesque Medium";
+  line-height: 1.2em;
+}
+.article-body {
+  margin-top: 1em;
+}
+.article-name p {
+  font-size: 16px;
+}
+.article-topic p {
+  font-size: 16px;
+}
+.article-votes p {
+  font-size: 16px;
+}
+.article-details {
+  display: flex;
+  margin-top: 1em;
+  gap: 25px;
+}
+.article-bold {
+  font-family: "Brandon Grotesque Medium";
+}
