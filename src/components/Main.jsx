@@ -15,7 +15,7 @@ const Main = () => {
           </div>
           <ul className="featured-projects">
             <li>
-              <a href="link-to-topics"> Topics </a>
+              <Link to="/topics">Topics</Link>
             </li>
             <li>
               <Link to="/allarticles">Articles</Link>

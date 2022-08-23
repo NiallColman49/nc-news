@@ -1,8 +1,29 @@
-export const fetchAllArticles = () => {
-  return fetch(
-    "https://niall-northcoders-backend.herokuapp.com/api/articles"
-  ).then((res) => {
-    console.log(res);
-    return res.json();
-  });
+import axios from "axios";
+
+export const fetchAllArticles = (topic) => {
+  return axios
+    .get("https://niall-northcoders-backend.herokuapp.com/api/articles", {
+      params: { topic },
+    })
+    .then(({ data }) => {
+      return data;
+    });
+};
+
+export const fetchAllTopics = () => {
+  return axios
+    .get("https://niall-northcoders-backend.herokuapp.com/api/topics")
+    .then(({ data }) => {
+      return data;
+    });
+};
+
+export const fetchSingleTopics = (topic) => {
+  return axios
+    .get(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles?topic=${topic}`
+    )
+    .then(({ data }) => {
+      return data;
+    });
 };

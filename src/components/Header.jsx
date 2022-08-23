@@ -20,14 +20,14 @@ const Header = () => {
                 <a>Users</a>
               </li>
               <li>
-                <a>Topics</a>
+                <Link to="/topics">Topics</Link>
               </li>
               <li>
                 <a>Login</a>
               </li>
             </ul>
           </nav>
-          <button class="hamburger">
+          <button className="hamburger">
             <span></span>
           </button>
         </div>
