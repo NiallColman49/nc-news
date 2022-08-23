@@ -27,3 +27,13 @@ export const fetchSingleTopics = (topic) => {
       return data;
     });
 };
+
+export const fetchIndividualArticle = (topic) => {
+  return axios
+    .get(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles?topic=${topic}`
+    )
+    .then(({ data }) => {
+      return data;
+    });
+};
