@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import { Routes, Route } from "react-router-dom";
 import SingleTopic from "./components/SingleTopics";
+import IndividualArticle from "./components/IndividualArticle";
 
 function App() {
   return (
@@ -14,7 +15,11 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/allarticles" element={<ALLArticles />} />
         <Route path="/allarticles/:topic" element={<ALLArticles />} />
-        <Route path="/articles/:article_id" element={<SingleTopic />} />
+        <Route path="/topics" element={<SingleTopic />} />
+        <Route
+          path="/articles/:individual_article"
+          element={<IndividualArticle />}
+        />
       </Routes>
       <Footer />
     </>

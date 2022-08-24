@@ -591,6 +591,7 @@ ul.featured-projects li a {
 }
 .topics-options-container {
   margin: auto;
+  padding-bottom: 25px;
 }
 .topics-data {
   margin: auto;
@@ -633,4 +634,45 @@ ul.topicslist {
 }
 .data-comment span {
   font-family: Brandon Grotesque Medium;
+}
+h5 {
+  padding-top: 200px;
+}
+.indi--article-data {
+  padding: 225px 0px 100px 0px;
+  margin-left: 4em;
+  border-top: 1px solid black;
+  width: 75%;
+}
+.indi--article-title {
+  font-size: 70px;
+  font-family: "Brandon Grotesque Medium";
+  line-height: 1.2em;
+  border-top: 1px solid black;
+  padding-top: 50px;
+}
+.indi--article-body {
+  margin-top: 1em;
+  font-size: 40px;
+}
+.indi--article-data span {
+  font-family: "Brandon Grotesque Medium";
+}
+.indi--article-comment {
+  font-size: 28px;
+  padding-top: 60px;
+}
+.indi--article-author {
+  font-size: 28px;
+  padding-top: 35px;
+}
+.single-article-comment-container {
+  display: flex;
+  gap: 45px;
+}
+.vote-button {
+  font-family: "Brandon Grotesque Medium";
+}
+ul.menu {
+  gap: 1em;
 }

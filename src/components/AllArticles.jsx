@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { fetchAllArticles } from "../api-util";
 import Topics from "./Topics";
 
@@ -22,11 +22,14 @@ const Articles = () => {
       <Topics />
       <ul>
         {articles.map((article) => {
+          console.log(articles);
           return (
             <main className="article-wrapper">
               <div className="article-container">
                 <li className="article-item" key={article.article_id}>
-                  <div className="article-title">{article.title}</div>
+                  <Link to={`/articles/${article.article_id}`}>
+                    <div className="article-title">{article.title}</div>
+                  </Link>
                   <div className="article-body">{article.body}</div>
                   <div className="article-details">
                     <div className="article-name">
