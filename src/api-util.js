@@ -34,7 +34,6 @@ export const fetchIndividualArticle = (article_id) => {
       `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`
     )
     .then(({ data }) => {
-      console.log(data);
       return data;
     });
 };
@@ -59,6 +58,16 @@ export const patchArticleDownVotes = (article_id) => {
       {
         inc_votes: -1,
       }
+    )
+    .then(({ data }) => {
+      return data;
+    });
+};
+
+export const fetchArticleComments = (article_id) => {
+  return axios
+    .get(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}/comments`
     )
     .then(({ data }) => {
       return data;

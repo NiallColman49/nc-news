@@ -6,6 +6,7 @@ import Main from "./components/Main";
 import { Routes, Route } from "react-router-dom";
 import SingleTopic from "./components/SingleTopics";
 import IndividualArticle from "./components/IndividualArticle";
+import UserLogin from "./components/UserLogin";
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
           path="/articles/:individual_article"
           element={<IndividualArticle />}
         />
+        <Route
+          path="/articles/:individual_article/comments"
+          element={<IndividualArticle />}
+        />
+        <Route path="/login" element={<UserLogin />} />
       </Routes>
       <Footer />
     </>

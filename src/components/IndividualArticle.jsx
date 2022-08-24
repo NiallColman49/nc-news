@@ -3,14 +3,16 @@ import {
   fetchIndividualArticle,
   patchArticleUpVotes,
   patchArticleDownVotes,
+  fetchArticleComments,
 } from "../api-util";
 import { useParams } from "react-router-dom";
 
 const IndividualArticle = () => {
   const [singleArticle, setSingleArticle] = useState([]);
+  const [articleComments, setArticleComments] = useState([]);
   const [loading, setIsLoading] = useState(true);
   const [voteCount, setVoteCount] = useState(0);
-  const [err, setErr] = useState(null);
+  const [showComments, setShowComments] = useState(false);
 
   const { individual_article } = useParams();
 
@@ -19,7 +21,34 @@ const IndividualArticle = () => {
       setSingleArticle(articleData);
       setIsLoading(false);
     });
+    fetchArticleComments(individual_article).then((articleData) => {
+      setArticleComments(articleData);
+      setIsLoading(false);
+    });
   }, [individual_article]);
+
+  const { comments } = articleComments;
+
+  const handleCommentDisplay = () => {
+    console.log("clicked");
+    setShowComments(!showComments);
+    const mappedComments = comments.map((comment) => (
+      <div className="opened-comment">
+        <div className="opened-contain">
+          <span className="opened-author">Article author: </span>
+          {comment.author}
+          <span className="opened-votes">Votes: </span>
+          {comment.votes}{" "}
+        </div>
+        <div>
+          <span>Article Comment : </span>
+        </div>
+        {comment.body}
+      </div>
+    ));
+    console.log(mappedComments);
+    setShowComments(mappedComments);
+  };
 
   const handleUpVote = () => {
     setVoteCount((currCount) => currCount + 1);
@@ -54,7 +83,13 @@ const IndividualArticle = () => {
       <p className="indi--article-body">{singleArticle.article.body}</p>
       <div className="single-article-comment-container">
         <p className="indi--article-comment">
-          <span>Comment count: </span>
+          <button
+            onClick={() => {
+              handleCommentDisplay();
+            }}
+          >
+            <span>Comment count: </span>
+          </button>{" "}
           {singleArticle.article.comment_count}
         </p>
         <p className="indi--article-comment">
@@ -77,10 +112,12 @@ const IndividualArticle = () => {
               handleDownVote();
             }}
           >
+            {" "}
             -
           </button>{" "}
         </p>
       </div>
+      {showComments}
     </div>
   );
 };

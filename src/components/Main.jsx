@@ -21,7 +21,7 @@ const Main = () => {
               <Link to="/allarticles">Articles</Link>
             </li>
             <li>
-              <a href="link to categories">Categories</a>
+              <Link to="/login">Login</Link>
             </li>
             <li>
               <a href="link to user"> Usernames </a>

@@ -16,7 +16,7 @@ const Articles = () => {
     });
   }, [topic]);
 
-  if (isLoading) return <h1>Currently loading...</h1>;
+  if (isLoading) return <p>Currently loading...</p>;
   return (
     <>
       <Topics />

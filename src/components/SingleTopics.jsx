@@ -17,7 +17,7 @@ const SingleTopic = () => {
   }, [topics]);
 
   console.log(singleTopic);
-  if (loading) return <h1>Currently loading...</h1>;
+  if (loading) return <p>Currently loading...</p>;
 
   return (
     <>

@@ -247,6 +247,7 @@ button {
 }
 span.underline {
   border-bottom: 2px solid red;
+  font-family: "Brandon Grotesque Medium";
 }
 @media screen and (max-width: 1500px) {
   body {
@@ -675,4 +676,24 @@ h5 {
 }
 ul.menu {
   gap: 1em;
+}
+.opened-comment {
+  line-height: 1.4em;
+  margin: 25px 0px 15px 0px;
+  padding-bottom: 35px;
+  border-bottom: 2px solid black;
+}
+.opened-contain {
+  margin-top: 1em;
+  margin-bottom: 20px;
+}
+.opened-author {
+}
+.opened-votes {
+  margin-left: 25px;
+}
+.login-form {
+  padding-top: 250px;
+  margin-left: 4em;
+  margin-bottom: 150px;
 }
