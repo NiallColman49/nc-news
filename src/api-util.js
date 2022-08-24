@@ -28,10 +28,10 @@ export const fetchSingleTopics = (topic) => {
     });
 };
 
-export const fetchIndividualArticle = (topic) => {
+export const fetchIndividualArticle = (article_id) => {
   return axios
     .get(
-      `https://niall-northcoders-backend.herokuapp.com/api/articles?topic=${topic}`
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`
     )
     .then(({ data }) => {
       return data;
