@@ -34,6 +34,33 @@ export const fetchIndividualArticle = (article_id) => {
       `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`
     )
     .then(({ data }) => {
+      console.log(data);
+      return data;
+    });
+};
+
+export const patchArticleUpVotes = (article_id) => {
+  return axios
+    .patch(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`,
+      {
+        inc_votes: 1,
+      }
+    )
+    .then(({ data }) => {
+      return data;
+    });
+};
+
+export const patchArticleDownVotes = (article_id) => {
+  return axios
+    .patch(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`,
+      {
+        inc_votes: -1,
+      }
+    )
+    .then(({ data }) => {
       return data;
     });
 };
