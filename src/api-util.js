@@ -37,3 +37,17 @@ export const fetchIndividualArticle = (article_id) => {
       return data;
     });
 };
+
+export const patchArticleVotes = () => {
+  return axios
+    .patch(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`
+      // {
+      //   inc_votes: 1,
+      // }
+    )
+    .then(({ data }) => {
+      console.log(data);
+      return data;
+    });
+};
