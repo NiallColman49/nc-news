@@ -28,20 +28,20 @@ export const fetchSingleTopics = (topic) => {
     });
 };
 
-export const fetchIndividualArticle = (article_id) => {
+export const fetchIndividualArticle = (articleId) => {
   return axios
     .get(
-      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${articleId}`
     )
     .then(({ data }) => {
       return data;
     });
 };
 
-export const patchArticleUpVotes = (article_id) => {
+export const patchArticleUpVotes = (articleId) => {
   return axios
     .patch(
-      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`,
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${articleId}`,
       {
         inc_votes: 1,
       }
@@ -51,10 +51,10 @@ export const patchArticleUpVotes = (article_id) => {
     });
 };
 
-export const patchArticleDownVotes = (article_id) => {
+export const patchArticleDownVotes = (articleId) => {
   return axios
     .patch(
-      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}`,
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${articleId}`,
       {
         inc_votes: -1,
       }
@@ -64,10 +64,10 @@ export const patchArticleDownVotes = (article_id) => {
     });
 };
 
-export const fetchArticleComments = (article_id) => {
+export const fetchArticleComments = (articleId) => {
   return axios
     .get(
-      `https://niall-northcoders-backend.herokuapp.com/api/articles/${article_id}/comments`
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${articleId}/comments`
     )
     .then(({ data }) => {
       return data;
