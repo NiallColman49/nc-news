@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchSingleTopics } from "../api-util";
 import { useParams } from "react-router-dom";
 import Topics from "./Topics";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const SingleTopic = () => {
   const [singleTopic, setSingleTopic] = useState([]);
@@ -10,15 +11,14 @@ const SingleTopic = () => {
   const { topics } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     fetchSingleTopics(topics).then((topicData) => {
       setSingleTopic(topicData);
       setIsLoading(false);
     });
   }, [topics]);
 
-  console.log(singleTopic);
-  if (loading) return <h1>Currently loading...</h1>;
-
+  if (loading) return <PropagateLoader />;
   return (
     <>
       <Topics />

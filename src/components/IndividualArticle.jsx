@@ -3,23 +3,53 @@ import {
   fetchIndividualArticle,
   patchArticleUpVotes,
   patchArticleDownVotes,
+  fetchArticleComments,
+  postArticleComment,
 } from "../api-util";
 import { useParams } from "react-router-dom";
+import PropagateLoader from "react-spinners/PropagateLoader";
+import NewComment from "./NewComment";
 
 const IndividualArticle = () => {
   const [singleArticle, setSingleArticle] = useState([]);
+  const [articleComments, setArticleComments] = useState([]);
   const [loading, setIsLoading] = useState(true);
   const [voteCount, setVoteCount] = useState(0);
-  const [err, setErr] = useState(null);
+  const [showComments, setShowComments] = useState(false);
+  const [newComment, setNewComment] = useState({});
 
   const { individual_article } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     fetchIndividualArticle(individual_article).then((articleData) => {
-      setSingleArticle(articleData);
+      setSingleArticle(articleData.article);
       setIsLoading(false);
     });
-  }, [individual_article]);
+    fetchArticleComments(individual_article).then((articleData) => {
+      setArticleComments(articleData.comments);
+      setIsLoading(false);
+    });
+  }, [individual_article, newComment]);
+
+  const handleCommentDisplay = () => {
+    setShowComments(!showComments);
+    const mappedComments = articleComments.map((comment) => (
+      <div className="opened-comment">
+        <div className="opened-contain">
+          <span className="opened-author">Author: </span>
+          {comment.author}
+          <span className="opened-votes">Votes: </span>
+          {comment.votes}{" "}
+        </div>
+        <div>
+          <span className="opened-comment">Comment: </span>
+        </div>
+        {comment.body}
+      </div>
+    ));
+    setShowComments(mappedComments);
+  };
 
   const handleUpVote = () => {
     setVoteCount((currCount) => currCount + 1);
@@ -43,26 +73,40 @@ const IndividualArticle = () => {
       });
   };
 
-  if (loading) return <h1>Currently loading...</h1>;
+  const addComment = (body) => {
+    postArticleComment(individual_article, body).then((res) =>
+      setArticleComments((currArticleComments) => {
+        return [...currArticleComments, res.newArticleComment];
+      })
+    );
+  };
+
+  if (loading) return <p>is loading...</p>;
   return (
     <div className="indi--article-data">
-      <h1 className="indi--article-title">{singleArticle.article.title}</h1>
+      <h1 className="indi--article-title">{singleArticle.title}</h1>
       <p className="indi--article-author">
         <span>Author: </span>
-        {singleArticle.article.author}
+        {singleArticle.author}
       </p>
-      <p className="indi--article-body">{singleArticle.article.body}</p>
+      <p className="indi--article-body">{singleArticle.body}</p>
       <div className="single-article-comment-container">
         <p className="indi--article-comment">
-          <span>Comment count: </span>
-          {singleArticle.article.comment_count}
+          <button
+            onClick={() => {
+              handleCommentDisplay();
+            }}
+          >
+            <span>Comment count: </span>
+          </button>{" "}
+          {singleArticle.comment_count}
         </p>
         <p className="indi--article-comment">
           <span>Topic: </span>
-          {singleArticle.article.topic}
+          {singleArticle.topic}
         </p>
         <p className="indi--article-comment vote-button">
-          Votes: {singleArticle.article.votes + voteCount}{" "}
+          Votes: {singleArticle.votes + voteCount}{" "}
           <button
             className="vote-button"
             onClick={() => {
@@ -77,10 +121,18 @@ const IndividualArticle = () => {
               handleDownVote();
             }}
           >
+            {" "}
             -
           </button>{" "}
         </p>
       </div>
+      <div className="write-comment-header">
+        <p>Write your comment here:</p>
+        <div className="insert-label">
+          <NewComment submitLabel="Insert" handleSubmit={addComment} />
+        </div>
+      </div>
+      {showComments}
     </div>
   );
 };
