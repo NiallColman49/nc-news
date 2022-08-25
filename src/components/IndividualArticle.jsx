@@ -76,6 +76,7 @@ const IndividualArticle = () => {
   const addComment = (body) => {
     postArticleComment(individual_article, body).then((res) =>
       setArticleComments((currArticleComments) => {
+        alert("comment submitted");
         return [...currArticleComments, res.newArticleComment];
       })
     );
