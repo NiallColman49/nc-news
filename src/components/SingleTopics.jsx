@@ -11,6 +11,7 @@ const SingleTopic = () => {
   const { topics } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     fetchSingleTopics(topics).then((topicData) => {
       setSingleTopic(topicData);
       setIsLoading(false);

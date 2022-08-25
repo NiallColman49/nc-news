@@ -73,3 +73,20 @@ export const fetchArticleComments = (articleId) => {
       return data;
     });
 };
+
+export const postArticleComment = (articleId, body) => {
+  return axios
+    .post(
+      `https://niall-northcoders-backend.herokuapp.com/api/articles/${articleId}/comments`,
+      {
+        username: "jessjelly",
+        body: body,
+      }
+    )
+    .then(({ data }) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};

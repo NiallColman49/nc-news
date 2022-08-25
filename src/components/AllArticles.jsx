@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchAllArticles } from "../api-util";
 import Topics from "./Topics";
-import PropagateLoader from "react-spinners/PropagateLoader";
+// import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -11,13 +11,14 @@ const Articles = () => {
   const { topic } = useParams();
 
   useEffect(() => {
+    setIsLoading(true);
     fetchAllArticles(topic).then((articlesFromApi) => {
       setArticles(articlesFromApi);
       setIsLoading(false);
     });
   }, [topic]);
 
-  if (isLoading) return <PropagateLoader />;
+  if (isLoading) return <p>is loading</p>;
   return (
     <>
       <Topics />
