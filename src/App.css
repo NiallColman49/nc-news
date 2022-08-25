@@ -697,3 +697,10 @@ ul.menu {
   margin-left: 4em;
   margin-bottom: 150px;
 }
+.opened-comment {
+  font-size: 24px;
+}
+.write-comment-header {
+  margin-top: 15px;
+  font-size: 24px;
+}

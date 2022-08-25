@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 import { fetchAllTopics } from "../api-util";
 import { Link } from "react-router-dom";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Topics = () => {
+  const [loading, setIsLoading] = useState(true);
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {
     fetchAllTopics().then((topicData) => {
       setTopics(topicData.topics);
+      setIsLoading(false);
     });
   }, []);
 
+  if (loading) return <PropagateLoader />;
   return (
     <div className="topics-options-container">
       <ul className="topicslist">

@@ -6,6 +6,7 @@ import {
   fetchArticleComments,
 } from "../api-util";
 import { useParams } from "react-router-dom";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const IndividualArticle = () => {
   const [singleArticle, setSingleArticle] = useState([]);
@@ -35,13 +36,13 @@ const IndividualArticle = () => {
     const mappedComments = comments.map((comment) => (
       <div className="opened-comment">
         <div className="opened-contain">
-          <span className="opened-author">Article author: </span>
+          <span className="opened-author">Author: </span>
           {comment.author}
           <span className="opened-votes">Votes: </span>
           {comment.votes}{" "}
         </div>
         <div>
-          <span>Article Comment : </span>
+          <span className="opened-comment">Comment: </span>
         </div>
         {comment.body}
       </div>
@@ -72,7 +73,7 @@ const IndividualArticle = () => {
       });
   };
 
-  if (loading) return <h1>Currently loading...</h1>;
+  if (loading) return <PropagateLoader />;
   return (
     <div className="indi--article-data">
       <h1 className="indi--article-title">{singleArticle.article.title}</h1>
@@ -116,6 +117,9 @@ const IndividualArticle = () => {
             -
           </button>{" "}
         </p>
+      </div>
+      <div className="write-comment-header">
+        <p>Write your comment here:</p>
       </div>
       {showComments}
     </div>

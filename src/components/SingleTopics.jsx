@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchSingleTopics } from "../api-util";
 import { useParams } from "react-router-dom";
 import Topics from "./Topics";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const SingleTopic = () => {
   const [singleTopic, setSingleTopic] = useState([]);
@@ -16,9 +17,7 @@ const SingleTopic = () => {
     });
   }, [topics]);
 
-  console.log(singleTopic);
-  if (loading) return <p>Currently loading...</p>;
-
+  if (loading) return <PropagateLoader />;
   return (
     <>
       <Topics />

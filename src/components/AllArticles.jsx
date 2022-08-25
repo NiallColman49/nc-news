@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchAllArticles } from "../api-util";
 import Topics from "./Topics";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -16,7 +17,7 @@ const Articles = () => {
     });
   }, [topic]);
 
-  if (isLoading) return <p>Currently loading...</p>;
+  if (isLoading) return <PropagateLoader />;
   return (
     <>
       <Topics />
