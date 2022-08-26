@@ -1,13 +1,16 @@
 import axios from "axios";
 
-export const fetchAllArticles = (topic) => {
-  return axios
-    .get("https://niall-northcoders-backend.herokuapp.com/api/articles", {
-      params: { topic },
-    })
-    .then(({ data }) => {
-      return data;
-    });
+export const fetchAllArticles = (topic, sort_by, order) => {
+  return (
+    axios
+      .get("https://niall-northcoders-backend.herokuapp.com/api/articles", {
+        params: { topic: topic, sort_by: sort_by, order_by: order },
+      })
+      //puts the url parameters on the request - can view on the data.response.url
+      .then(({ data }) => {
+        return data;
+      })
+  );
 };
 
 export const fetchAllTopics = () => {

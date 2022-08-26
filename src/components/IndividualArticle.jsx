@@ -7,7 +7,7 @@ import {
   postArticleComment,
 } from "../api-util";
 import { useParams } from "react-router-dom";
-import PropagateLoader from "react-spinners/PropagateLoader";
+// import PropagateLoader from "react-spinners/PropagateLoader";
 import NewComment from "./NewComment";
 
 const IndividualArticle = () => {

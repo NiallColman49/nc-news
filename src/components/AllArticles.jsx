@@ -1,30 +1,34 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { fetchAllArticles } from "../api-util";
+import SortedArticles from "./SortedArticles";
 import Topics from "./Topics";
 // import PropagateLoader from "react-spinners/PropagateLoader";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [sortBy, setSortBy] = useState("created_at"); // values set in backend - default
+  const [order, setOrder] = useState("ASC"); // values set in backend - default
 
   const { topic } = useParams();
 
   useEffect(() => {
     setIsLoading(true);
-    fetchAllArticles(topic).then((articlesFromApi) => {
+    fetchAllArticles(topic, sortBy, order).then((articlesFromApi) => {
+      console.log(articlesFromApi);
       setArticles(articlesFromApi);
       setIsLoading(false);
     });
-  }, [topic]);
-
+  }, [topic, sortBy, order]);
+  console.log(order, sortBy);
   if (isLoading) return <p>is loading</p>;
   return (
     <>
       <Topics />
+      <SortedArticles setOrder={setOrder} setSortBy={setSortBy} />
       <ul>
         {articles.map((article) => {
-          console.log(articles);
           return (
             <main className="article-wrapper">
               <div className="article-container">
